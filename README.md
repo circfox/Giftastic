@@ -1,1 +1,2 @@
 # Giftastic
+This homework deals with the importance of API's and how to access and display API data. The Giphy API was used in this homework. When opened in a browser, 10 buttons are created and each is assigned a topic, in our case, animals. Additonal buttons can be added by submitting a topic from a text input box. When a button is clicked, 10 GIFs related to that topic are displayed. A rating for each GIF is also displayed. Clicking on the image will animate the GIF. Clicking it again puts the image on still.    

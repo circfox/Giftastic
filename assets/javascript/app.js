@@ -1,6 +1,6 @@
 $(document).ready(function () {
 });
-var topic = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "angry birds", "ferret", "turtle", "nemo"];
+var topics = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "angry birds", "ferret", "turtle", "nemo"];
 //function for dumping JSON content for each button into div
 function displayGif() {
   $("#gifs-area").empty();
@@ -15,7 +15,7 @@ function displayGif() {
   }).done(function (response) {
 
     console.log(response);
-     for (var i = 0; i < topic.length; i++) {
+     for (var i = 0; i < topics.length; i++) {
        var nameDiv = $("<div>");
        nameDiv.addClass("xgif");
 
@@ -38,20 +38,20 @@ function displayGif() {
 }
 //function for displaying gif data
 function renderButtons() {
-  // Deleting the movies prior to adding new movies
+  // Deleting the GIFs prior to adding new Gifs
   // (this is necessary otherwise you will have repeat buttons)
   $("#buttons-area").empty();
   // Looping through the array of movies
-  for (var k = 0; k < topic.length; k++) {
+  for (var k = 0; k < topics.length; k++) {
     // Then dynamicaly generating buttons for each topic in the array
     // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
     var a = $("<button>");
     // Adding a class of gif-btn to our button
     a.addClass("gif-btn");
     // Adding a data-attribute topic
-    a.attr("data-name", topic[k]);
+    a.attr("data-name", topics[k]);
     // Providing the initial button text
-    a.text(topic[k]);
+    a.text(topics[k]);
     // Adding the button to the buttons-view div
     $("#buttons-area").append(a);
   }
@@ -82,7 +82,7 @@ $("#add-gif").on("click", function (event) {
   var newTopic = $("#gif-input").val().trim();
   // The item from the textbox is then added to our array
   
-  topic.push(newTopic);
+  topics.push(newTopic);
   // Calling renderButtons which handles the processing of our gif array
   renderButtons();
                                                                    
