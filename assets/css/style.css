@@ -27,7 +27,7 @@
 }
 #gif-form {
   position: absolute;
-  color: white;
+  color: black;
   opacity: 0.8;
  top: 75px;
 }
@@ -45,21 +45,16 @@ body, html{
   background-position: center;
   /*background-repeat: no-repeat;*/
   background-size: cover;
-  background-image:url("../images/jurassic_bgconcept_02.jpg");
+ /* background-image:url
+  ("../images/jurassic_bgconcept_02.jpg");background: url("../images/BareHorribleBorzoi-max-1mb.gif");*/
+  background-image:url("../images/giphy.gif");
   
+  
+   
  }
  .container {
     margin-left: 50px;
 
  }
 
- .btn-animal {
-   background: rgb(236, 188, 27);
-   border: 1px solid blue;
-  
-   color: black;
-   padding: 14px 28px;
-   font-size: 16px;
-   cursor: pointer;
-   border-radius: 5px;
- }
+ 

@@ -19,7 +19,7 @@ function displayGif() {
        var nameDiv = $("<div>");
        nameDiv.addClass("xgif");
 
-       var xx = $("<img width = 175px height = 175px class ='prop-gif'>");
+       var xx = $("<img width = 150px height = 150px class ='prop-gif'>");
        xx.attr("src", response.data[i].images.original_still.url);
        xx.attr("data-still", response.data[i].images.original_still.url);
        xx.attr("data-animate", response.data[i].images.original.url);
@@ -74,21 +74,18 @@ function animateGif() {
   }
 }
 
-// This function handles events where submit button is clicked
+// Function that handles events for submit button
 $("#add-gif").on("click", function (event) {
  event.preventDefault();
 
-  // This line grabs the input from the textbox
+// grab input from text box
   var newTopic = $("#gif-input").val().trim();
-  // The item from the textbox is then added to our array
-  
+  // new topic is added to end of topics array  
   topics.push(newTopic);
-  // Calling renderButtons which handles the processing of our gif array
+  // buttons re loaded with new topic
   renderButtons();
                                                                    
 });
 renderButtons();
-
-//$(document).on("click", "#input", displayGif);
 $(document).on("click", ".gif", animateGif);
 $(document).on("click", ".gif-btn", displayGif);
