@@ -1,0 +1,62 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+#buttons-area{
+  position: absolute;  
+  top: 50px;
+  margin-right: 10px; 
+  
+}
+.gif-btn{
+  margin-right: 10px;
+}
+#gifs-area{
+  position: absolute;
+  top:150px;
+  float: right;
+  color: white;
+}
+#add-gif{
+  position: absolute;
+  top: 100px;
+  left: 320px;
+  color: black;
+}
+#gif-form {
+  position: absolute;
+  color: white;
+  opacity: 0.8;
+
+ top:100px;
+}
+.prop-gif{
+  float: right;
+ 
+}
+body, html{ 
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+ 
+  background-image:url("../images/jurassic_bgconcept_02.jpg");
+  
+ }
+ .container {
+    margin-left: 50px;
+
+ }
+
+ .btn-animal {
+   background: rgb(236, 188, 27);
+   border: 1px solid blue;
+  
+   color: black;
+   padding: 14px 28px;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 5px;
+ }
