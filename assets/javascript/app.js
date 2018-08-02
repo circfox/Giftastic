@@ -5,9 +5,9 @@ var topics = ["dog", "cat", "rabbit", "hamster", "skunk", "goldfish", "angry bir
 function displayGif() {
   $("#gifs-area").empty();
   var x = $(this).attr("data-name");
+ 
 
-
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=dc6zaTOxFJmzC&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + x + "&api_key=dc6zaTOxFJmzC&limit = 10";
 
   $.ajax({
     url: queryURL,
@@ -15,7 +15,7 @@ function displayGif() {
   }).done(function (response) {
 
     console.log(response);
-     for (var i = 0; i < topics.length; i++) {
+     for (var i = 0; i < 10; i++) {
        var nameDiv = $("<div>");
        nameDiv.addClass("xgif");
 
@@ -83,7 +83,10 @@ $("#add-gif").on("click", function (event) {
   // new topic is added to end of topics array  
   topics.push(newTopic);
   // buttons re loaded with new topic
+  
   renderButtons();
+
+  
                                                                    
 });
 renderButtons();
